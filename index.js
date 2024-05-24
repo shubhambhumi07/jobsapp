@@ -12,7 +12,7 @@ const app= express();
 app.use(express.json());
 
 mongoose
-.connect("mongodb://localhost:27017/jobapp")
+.connect("mongodb+srv://shubhamsinghbhumi:6Gjgwypm1wa2tR1f@jobapp.b6zbkcl.mongodb.net/")
 .then(()=> console.log("server established"))
 .catch(()=> console.log("error",err));
 
