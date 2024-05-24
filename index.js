@@ -19,4 +19,4 @@ mongoose
 
 app.use(jobRoutes);
 
-app.listen(8080,()=>console.log("server is running"));
+app.listen(10000,()=>console.log("server is running"));

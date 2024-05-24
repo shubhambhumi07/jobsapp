@@ -3,7 +3,7 @@ const jobModel= require("../model/job");
 const createJob= async(req,res) =>{
 
 //   process to add data and create job
-
+   
    const jobObj= req.body;
    const newJob= jobModel(jobObj);
    const newlySavedJob=await newJob.save();
@@ -72,7 +72,7 @@ const deleteJob= async(req,res) =>{
     // }
     // await jobModel.findOneAndDelete(findObj);
     // ----------
-    
+
     // await jobModel.deleteMany(findObj);
     // delete many job with same object
     // --------->>>
