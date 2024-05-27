@@ -2,6 +2,7 @@
 
 const express= require("express");
 const mongoose= require("mongoose");
+const dotenv= require("dotenv");
 
 const jobRoutes= require("./route/job");
 // const mongoose = require("mongodb");
@@ -9,10 +10,12 @@ const jobRoutes= require("./route/job");
 
 const app= express();
 
+dotenv.config();
+
 app.use(express.json());
 
 mongoose
-.connect("mongodb+srv://shubhamsinghbhumi:6Gjgwypm1wa2tR1f@jobapp.b6zbkcl.mongodb.net/")
+.connect(process.env.DB_CONNECTION_URL)
 .then(()=> console.log("server established"))
 .catch(()=> console.log("error",err));
 
